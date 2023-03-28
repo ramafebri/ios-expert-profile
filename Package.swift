@@ -23,7 +23,7 @@ let package = Package(
             name: "ProfilePackage",
             dependencies: [],
             resources: [
-                .process("profile.jpeg")
+                .process("dufan.jpg")
             ]
         ),
         .testTarget(

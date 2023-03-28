@@ -1,14 +1,15 @@
 import SwiftUI
-import UIKit
 
 public struct ProfileView: View {
+    let profileUrl = Bundle.module.url(forResource: "profile", withExtension: "jpeg")
     public init() {
         
     }
     
+    @available(macOS 10.15, *)
     public var body: some View {
         VStack {
-            Image(uiImage: UIImage(named: "profile")!)
+            Image("profile", bundle: Bundle.module)
                 .resizable()
                 .frame(width: 200, height: 200)
                 .imageScale(.large)
@@ -26,7 +27,6 @@ public struct ProfileView: View {
 }
 
 struct ProfileView_Previews: PreviewProvider {
-    @available(macOS 10.15, *)
     static var previews: some View {
         ProfileView()
     }
