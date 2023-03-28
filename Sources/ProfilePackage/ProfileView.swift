@@ -1,12 +1,10 @@
 import SwiftUI
 
 public struct ProfileView: View {
-    let profileUrl = Bundle.module.url(forResource: "profile", withExtension: "jpeg")
     public init() {
         
     }
     
-    @available(macOS 10.15, *)
     public var body: some View {
         VStack {
             Image("profile", bundle: Bundle.module)
